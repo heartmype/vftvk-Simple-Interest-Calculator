@@ -10,7 +10,7 @@ function compute() {
     document.getElementById("result").innerHTML = result;
      if (principal < 0)
     {
-    alert("the amount can't be negative");
+    alert("enter a positive number");
     return false;
     }  
 }
