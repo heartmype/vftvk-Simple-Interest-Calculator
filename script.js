@@ -1,12 +1,18 @@
-function compute()
-{
-    p = document.getElementById("principal").value;
-}
+function compute() {
     var principal = document.getElementById("principal").value;
     var rate = document.getElementById("rate").value;
     var years = document.getElementById("years").value;
-    var interest = principal * years * rate /100;
-    var year = new Date().getFullYear()+parseInt(years);
+
+    var date_jour = new Date().getFullYear(); // Obtenir la date du jour
+    var due_date = parseInt(date_jour, 10) + parseInt(years, 10);
+    var interest = principal * years * rate / 100;
+    var result = "Deposit <mark>" + principal + "</mark>,<br> Interest rate of <mark>" + rate + "</mark> % <br> Total amount of <mark>" + interest + ",</mark><br> in the year <mark>" + due_date + "</mark>";
+    document.getElementById("result").innerHTML = result;
+}
+
+function showVal(newVal) { //Afficher la tranche de pourcentage dans le span
+    document.getElementById("showRate").innerHTML = newVal + '%';
+}
 
 function updateRate() 
 {
