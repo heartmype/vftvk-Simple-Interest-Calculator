@@ -8,6 +8,17 @@ function compute() {
     var interest = principal * years * rate / 100;
     var result = "Deposit <mark>" + principal + "</mark>,<br> Interest rate of <mark>" + rate + "</mark> % <br> Total amount of <mark>" + interest + ",</mark><br> in the year <mark>" + due_date + "</mark>";
     document.getElementById("result").innerHTML = result;
+     if (principal < 0)
+    {
+    alert("the amount can't be negative");
+    return false;
+    }  else if (principal=0){
+        alert("the amount can't be 0 ");
+        return false;
+        }  else if (principal=""){
+            alert("the amount can't be blank ");
+            return false;
+            }  
 }
 
 function showVal(newVal) { //Afficher la tranche de pourcentage dans le span
