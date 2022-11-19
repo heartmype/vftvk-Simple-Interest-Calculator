@@ -12,13 +12,7 @@ function compute() {
     {
     alert("the amount can't be negative");
     return false;
-    }  else if (principal=0){
-        alert("the amount can't be 0 ");
-        return false;
-        }  else if (principal=""){
-            alert("the amount can't be blank ");
-            return false;
-            }  
+    }  
 }
 
 function showVal(newVal) { //Afficher la tranche de pourcentage dans le span
