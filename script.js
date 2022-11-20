@@ -2,7 +2,7 @@ function compute() {
     var principal = document.getElementById("principal").value;
     var rate = document.getElementById("rate").value;
     var years = document.getElementById("years").value;
-    var total = 10 + 1 +” 3”;
+ 
 
     var date_jour = new Date().getFullYear(); // Obtenir la date du jour
     var due_date = parseInt(date_jour, 10) + parseInt(years, 10);
